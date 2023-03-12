@@ -10,7 +10,7 @@ ik_chain_tug_backward(chain,x,y);
 	can_x = oCan.x+(oCan.sprite_width/2)
 	can_y = oCan.y+(oCan.sprite_width/2)
 
-	d_desired_angle = point_direction(can_x,can_y,mouse_x,mouse_y)
+	d_desired_angle = point_direction(can_x,can_y,oPuppet.x,oPuppet.y)
 	desired_angle = angle_lerp(desired_angle,d_desired_angle,.005)
 
 	desired_dis = oCan.sprite_width/2

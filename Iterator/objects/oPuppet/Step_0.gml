@@ -1,8 +1,29 @@
 // Event created by Avis.
 event_inherited()
 
-y = mouse_y
-x = mouse_x
+//y = lerp(y,mouse_y,.2)
+//x = lerp(x,mouse_x,.2)
+
+dhsp = 0
+dvsp = 0
+
+if keyboard_check(vk_up) or keyboard_check(ord("W")) {
+	dvsp = -mspd	
+}
+if keyboard_check(vk_down) or keyboard_check(ord("S")) {
+	dvsp = mspd	
+}
+if keyboard_check(vk_right) or keyboard_check(ord("D")) {
+	dhsp = mspd	
+}
+if keyboard_check(vk_left) or keyboard_check(ord("A")) {
+	dhsp = -mspd	
+}
+hsp = lerp(hsp,dhsp,.2)
+vsp = lerp(vsp,dvsp,.2)
+
+x += hsp;
+y += vsp;
 
 spacing = 24
 
@@ -27,18 +48,22 @@ spacing = 24
 
 	if x > can_x + (213-spacing) { 
 		x = can_x + (213-spacing)
+		hsp = 0
 	}
 
 	if x < can_x - (213-spacing) { 
 		x = can_x - (213-spacing)
+		hsp = 0
 	}
 
 	if y > can_y + (213-spacing) { 
 		y = can_y + (213-spacing)
+		vsp = 0
 	}
 
 	if y < can_y - (213-spacing) { 
 		y = can_y - (213-spacing)
+		vsp = 0
 	}
 
 	

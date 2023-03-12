@@ -6,9 +6,9 @@ for(var i = 0; i<point_last; i+=2){
 	var y1 = points[i+1];
 	var x2 = points[i+2];
 	var y2 = points[i+3];
-	var c = merge_colour(c_green,c_red,i/point_last);
-	draw_line_colour(x1,y1,x2,y2,c,c);
-	draw_circle_colour(x2,y2,2,c,c,false);
+	//var c = merge_colour(c_green,c_red,i/point_last);
+	//draw_line_colour(x1,y1,x2,y2,c,c);
+	//draw_circle_colour(x2,y2,2,c,c,false);
 	if i = 10 {
 		draw_sprite(Bearing_large,0,x2,y2)
 		draw_sprite_ext(sShoulder,0,x2,y2,1,1,point_direction(x1,y1,x2,y2)+180,image_blend,image_alpha)	

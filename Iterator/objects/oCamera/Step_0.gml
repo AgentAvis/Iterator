@@ -5,7 +5,7 @@ mouse_lerp_mag = 0;
 
 if room = rMenu { mode = 3}
 
-if mode = 1 {
+if mode = 1 and room != rGame {
 	//setup other movement related stuff
 	rspd = mspd * true_zoom_level //regular speed 
 	if keyboard_check(vk_shift)		{ rspd *=	 2 }
@@ -34,6 +34,7 @@ if mode = 1 {
 	//}
 }
 
+
 if mode = 2 {
 	if instance_exists(target) {
 		tarx = target.x
@@ -48,6 +49,11 @@ if mode = 3 {
 	tary = room_height/2
 	
 }
+
+if room = rGame {
+	global.focus = oCan_cam
+}
+
 
 
 #region mouselerp/move actual camera x/y code code
