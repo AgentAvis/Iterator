@@ -1,0 +1,26 @@
+/// @desc draw_text_with_outlines
+/// @arg x
+/// @arg y
+/// @arg string
+/// @arg color
+/// @arg outline_color
+///draw_text_outlined(x, y, string, colour, outline_colour)
+function draw_text_outlined(argument0, argument1, argument2, argument3, argument4) {
+
+	var xx = argument0;
+	var yy = argument1;
+	var str = argument2;
+	draw_set_colour(argument4);
+	draw_text(xx-1, yy, string_hash_to_newline(str));
+	draw_text(xx+1, yy, string_hash_to_newline(str));
+	draw_text(xx, yy-1, string_hash_to_newline(str));
+	draw_text(xx, yy+1, string_hash_to_newline(str));
+	draw_set_colour(argument3);
+	draw_text(xx, yy, string_hash_to_newline(str));
+
+	draw_set_colour(c_white);
+
+
+
+
+}

@@ -1,0 +1,13 @@
+ALT + S	Create a new sprite resource
+ALT + U	Create a new sound resource
+ALT + B	Create a new tile set resource
+ALT + P	Create a new path resource
+ALT + C	Create a new script resource
+ALT + A	Create a new shader resource
+ALT + F	Create a new font resource
+ALT + T	Create a new timeline resource
+ALT + O	Create a new object resource
+ALT + R	Create a new room resource
+ALT + I	Create a new included data file resource
+ALT + N	Create a new note resource
+ALT + E	Create a new extension resource
