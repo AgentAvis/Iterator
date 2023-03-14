@@ -10,6 +10,7 @@ sum = 162+112+85+34+34+34 //153 not 53
 
 cart_angle = 0
 dcart_angle = 0
+angle_speed = 0
 
 d_desired_angle = 0
 desired_angle = 0
