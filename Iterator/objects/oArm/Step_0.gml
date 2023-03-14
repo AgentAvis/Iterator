@@ -41,6 +41,6 @@ ik_chain_tug_backward(chain,x,y);
 		dcart_angle = 90
 	}
 
-	cart_angle = angle_lerp(cart_angle,dcart_angle,.1)
+	cart_angle = angle_lerp(cart_angle,dcart_angle,.3)
 
 #endregion

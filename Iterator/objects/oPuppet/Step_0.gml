@@ -7,21 +7,54 @@ event_inherited()
 dhsp = 0
 dvsp = 0
 
+dimage_angle = 0
+
+var _up = false;
+var _down = false;
+var _left = false;
+var _right = false;
+
+m = false
+
 if keyboard_check(vk_up) or keyboard_check(ord("W")) {
-	dvsp = -mspd	
+	dvsp = -mspd
+	_up = true
+	m = true;
 }
 if keyboard_check(vk_down) or keyboard_check(ord("S")) {
 	dvsp = mspd	
+	_down = true;
+	m = true;
 }
 if keyboard_check(vk_right) or keyboard_check(ord("D")) {
 	dhsp = mspd	
+	_right = true
+	m = true;
 }
 if keyboard_check(vk_left) or keyboard_check(ord("A")) {
 	dhsp = -mspd	
+	_left = true
+	m = true;
 }
-hsp = lerp(hsp,dhsp,.2)
-vsp = lerp(vsp,dvsp,.2)
 
+if (_up and _right) or (_down and _right)  {
+	dimage_angle = 10	
+}
+if (_up and _left) or (_down and _left) {
+	dimage_angle = -10
+}
+
+image_angle = lerp(image_angle,dimage_angle,.05)
+
+
+
+if m {
+	hsp = lerp(hsp,dhsp,.3)
+	vsp = lerp(vsp,dvsp,.3)
+} else {
+	hsp = lerp(hsp,dhsp,.05)
+	vsp = lerp(vsp,dvsp,.05)		
+}
 x += hsp;
 y += vsp;
 

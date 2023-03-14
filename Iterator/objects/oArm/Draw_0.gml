@@ -1,6 +1,13 @@
 /// @desc render
 var points = ik_chain_get_points(chain,true);
 var point_last = array_length_1d(points)-2;
+
+var _startx = 0;
+var _starty = 0;
+
+var _endx = 0;
+var _endy = 0;
+
 for(var i = 0; i<point_last; i+=2){
 	var x1 = points[i+0];
 	var y1 = points[i+1];
@@ -12,6 +19,8 @@ for(var i = 0; i<point_last; i+=2){
 	if i = 10 {
 		draw_sprite(Bearing_large,0,x2,y2)
 		draw_sprite_ext(sShoulder,0,x2,y2,1,1,point_direction(x1,y1,x2,y2)+180,image_blend,image_alpha)	
+		_startx = x2;
+		_starty = y2;
 	}
 	if i = 8 {
 		draw_sprite(Bearing_mid,0,x2,y2)
@@ -25,7 +34,17 @@ for(var i = 0; i<point_last; i+=2){
 		draw_sprite(bearing_tiny,0,x2,y2)
 		draw_sprite_ext(sArm3,0,x2,y2,1,1,point_direction(x1,y1,x2,y2)+180,image_blend,image_alpha)	
 	}
+	
+	if i = 0 {
+		_endx = x1
+		_endy = y1
+	}
 	//draw_text(x1,y1,string(i))
 }
+
+//if point_distance(_startx,_starty,_endx,_endy) < sum {
+	oPuppet.x = _endx;
+	oPuppet.y = _endy;
+//}
 
 draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,cart_angle,image_blend,image_alpha)
