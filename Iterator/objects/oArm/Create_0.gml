@@ -14,3 +14,8 @@ angle_speed = 0
 
 d_desired_angle = 0
 desired_angle = 0
+
+cart = instance_create(x,y,oCart)
+cart.depth = 001
+
+depth = 101

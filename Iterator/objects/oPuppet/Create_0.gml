@@ -10,3 +10,8 @@ mspd = 3
 depth -= 10
 
 //global.focus = id
+
+light = instance_create(x,y,oLight_true)
+light.sprite_index = sGradient_weak_128
+
+

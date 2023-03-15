@@ -16,6 +16,10 @@ ik_chain_tug_backward(chain,x,y);
 	//desired_angle = angle_lerp(desired_angle,d_desired_angle,.005)
 	var _diff = angle_difference(d_desired_angle, desired_angle);
 	
+	if _diff < 5 {
+		_diff = 0	
+	}
+	
 	angle_speed = clamp(lerp(angle_speed,_diff,.1),-1,1);
 	//desired_angle += clamp(_diff,-1,1);
 	desired_angle += angle_speed;

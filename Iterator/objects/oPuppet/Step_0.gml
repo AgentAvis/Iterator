@@ -14,6 +14,9 @@ var _down = false;
 var _left = false;
 var _right = false;
 
+light.x = x
+light.y = y
+
 m = false
 
 if keyboard_check(vk_up) or keyboard_check(ord("W")) {
@@ -99,6 +102,8 @@ spacing = 24
 		vsp = 0
 	}
 
-	
+lightcolor = make_color_hsv(oDj.timestep mod 255,255,200)
+light.image_blend = c_white
+oLighting.image_blend = lightcolor
 
 #endregion
