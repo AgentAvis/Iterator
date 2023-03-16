@@ -12,6 +12,8 @@ depth -= 10
 //global.focus = id
 
 light = instance_create(x,y,oLight_true)
-light.sprite_index = sGradient_weak_128
+light.sprite_index = sGradient_true_128
 
-
+desired_x = 0; //init
+desired_y = 0; //init
+desired_dir = 0; //init

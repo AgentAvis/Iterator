@@ -1,13 +1,13 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oPuppet",
+  "name": "oCrosshair",
   "spriteId": {
-    "name": "sMoon",
-    "path": "sprites/sMoon/sMoon.yy",
+    "name": "sCrosshair",
+    "path": "sprites/sCrosshair/sCrosshair.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
@@ -26,13 +26,11 @@
   "physicsShapePoints": [],
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Puppet",
-    "path": "folders/Root/Game/Entities/Puppet.yy",
+    "name": "images",
+    "path": "folders/Root/Game/Entities/Puppet/images.yy",
   },
 }

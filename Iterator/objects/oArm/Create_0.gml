@@ -18,4 +18,6 @@ desired_angle = 0
 cart = instance_create(x,y,oCart)
 cart.depth = 001
 
-depth = 101
+//depth = oLighting.depth + 50
+
+depth = 160
