@@ -27,6 +27,8 @@ for(var i = 0; i<point_last; i+=2){
 		
 		draw_sprite_ext(sArm1,0,x2,y2,1,1,point_direction(x1,y1,x2,y2)+180,image_blend,image_alpha)	
 		draw_sprite(Bearing_mid,0,x2,y2)
+		mid_point.x = x1
+		mid_point.y = y1
 	}
 	if i = 6 {
 		
@@ -42,6 +44,11 @@ for(var i = 0; i<point_last; i+=2){
 	if i = 0 {
 		_endx = x1
 		_endy = y1
+	}
+	
+	if i = 2 {
+		wrist_point.x = x1
+		wrist_point.y = y1	
 	}
 	//draw_text(x1,y1,string(i))
 }

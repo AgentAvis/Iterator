@@ -21,3 +21,6 @@ cart.depth = 001
 //depth = oLighting.depth + 50
 
 depth = 160
+
+mid_point = instance_create(x,y,oUmbillical_mid_point)
+wrist_point = instance_create(x,y,oUmbillical_wrist_point)

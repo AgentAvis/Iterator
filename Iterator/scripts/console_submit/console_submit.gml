@@ -57,17 +57,17 @@ function console_submit(argument0) {
             
 	        } else 
         
-	        /* Selected last entered command */
+	        /* Selected _last entered command */
 	        if keyboard_check_pressed(vk_up) {
         
 	            if Console[? "dir"] = 1 {
 	                Console[? "dir"] = -1;
 	                Console[? "select"] = 0;
 	            }
-	            var last = ds_list_find_value(Console[? "history"],Console[? "select"]);
-	            if !is_undefined(last) {
-	                Console[? "string"] = last;
-	                Console[? "string_pos"] = string_length(last)+1;
+	            var _last = ds_list_find_value(Console[? "history"],Console[? "select"]);
+	            if !is_undefined(_last) {
+	                Console[? "string"] = _last;
+	                Console[? "string_pos"] = string_length(_last)+1;
 	            }
 	            if Console[? "select"] < ds_list_size(Console[? "history"]) then
 	            Console[? "select"] += 1 else Console[? "select"] = 0;
@@ -97,13 +97,13 @@ function console_submit(argument0) {
 	        /* Insert character */
 	        if !keyboard_check_pressed(vk_enter) {
         
-	            Console[? "string"] = string_insert(keyboard_lastchar,Console[? "string"],Console[? "string_pos"]);
-	            if keyboard_lastchar != "" then Console[? "string_pos"] += 1;
+	            Console[? "string"] = string_insert(keyboard__lastchar,Console[? "string"],Console[? "string_pos"]);
+	            if keyboard__lastchar != "" then Console[? "string_pos"] += 1;
             
 	        }
         
-	        /* Reset last character */
-	        keyboard_lastchar = "";
+	        /* Reset _last character */
+	        keyboard__lastchar = "";
 	    }
     
 	    /* Suggestions */
