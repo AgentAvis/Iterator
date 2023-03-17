@@ -4,11 +4,11 @@
 if can_zoom && !oConsole.console_status { //if  and room != rMenu and can_zoom {
 	//if keyboard_check(vk_shift) {
 	if true { //disable zoom
-		if mouse_wheel_down() {
-			scroll_level -= .75
+		if keyboard_check_pressed(vk_up) {// mouse_wheel_down() {
+			scroll_level += 1
 		}
-		if mouse_wheel_up() {
-			scroll_level += .75
+		if keyboard_check_pressed(vk_down) {//mouse_wheel_up() {
+			scroll_level -= 1
 		}
 	}
 	//}

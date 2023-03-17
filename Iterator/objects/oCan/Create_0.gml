@@ -9,3 +9,6 @@ with (instance_create(x,y,oLight_true)) {
 	sprite_index = sBorder
 	image_alpha = .25
 }
+
+oCamera.tarx = x + (sprite_width/2)
+oCamera.tary = y + (sprite_height/2)

@@ -54,8 +54,8 @@ for(var i = 0; i<point_last; i+=2){
 }
 
 //if point_distance(_startx,_starty,_endx,_endy) < sum {
-	oPuppet.x = _endx;
-	oPuppet.y = _endy;
+	//oPuppet.x = _endx;
+	//oPuppet.y = _endy;
 //}
 
 cart.x = x

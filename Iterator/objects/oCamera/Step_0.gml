@@ -5,7 +5,7 @@ mouse_lerp_mag = 0;
 
 if room = rMenu { mode = 3}
 
-if mode = 1 and room != rGame {
+if mode = 1 {
 	//setup other movement related stuff
 	rspd = mspd * true_zoom_level //regular speed 
 	if keyboard_check(vk_shift)		{ rspd *=	 2 }
@@ -15,10 +15,10 @@ if mode = 1 and room != rGame {
 	var m	  = false;
 	
 	if !oConsole.console_status {
-		if keyboard_check(vk_up)	+ keyboard_check(ord("W")){ _dvsp -= rspd	m = true	} 
-		if keyboard_check(vk_down)	+ keyboard_check(ord("S")){ _dvsp += rspd	m = true	} 
-		if keyboard_check(vk_left)  + keyboard_check(ord("A")){ _dhsp -= rspd	m = true	} 
-		if keyboard_check(vk_right) + keyboard_check(ord("D")){ _dhsp += rspd	m = true	}	
+		if keyboard_check(ord("W")){ _dvsp -= rspd	m = true	} //if keyboard_check(vk_up)	+ keyboard_check(ord("W")){ _dvsp -= rspd	m = true	} 
+		if keyboard_check(ord("S")){ _dvsp += rspd	m = true	}//if keyboard_check(vk_down)	+ keyboard_check(ord("S")){ _dvsp += rspd	m = true	} 
+		if keyboard_check(ord("A")){ _dhsp -= rspd	m = true	} //if keyboard_check(vk_left)  + keyboard_check(ord("A")){ _dhsp -= rspd	m = true	} 
+		if keyboard_check(ord("D")){ _dhsp += rspd	m = true	}	//if keyboard_check(vk_right) + keyboard_check(ord("D")){ _dhsp += rspd	m = true	}	
 	}
 	
 	if m {
@@ -51,7 +51,7 @@ if mode = 3 {
 }
 
 if room = rGame {
-	global.focus = oCan_cam
+	//global.focus = oCan_cam
 }
 
 
