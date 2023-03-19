@@ -89,13 +89,16 @@ if manual_move {
 	}
 }
 
+
 light.x = x
 light.y = y-16
 
-if m {
+if get_speed() > mspd/2 or m {
+	image_angle = angle_lerp(image_angle,point_direction(x,y,mouse_x,mouse_y),.03)
 	//hsp = lerp(hsp,dhsp,.3)
 	//vsp = lerp(vsp,dvsp,.3)
 } else {
+	//image_angle = angle_lerp(image_angle,0,.1,.001)
 	//hsp = lerp(hsp,dhsp,.05)
 	//vsp = lerp(vsp,dvsp,.05)		
 }

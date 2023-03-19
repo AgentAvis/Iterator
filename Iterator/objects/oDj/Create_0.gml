@@ -17,7 +17,7 @@ global.camera_clamp_in_room	= false	//clamp the camera so you can only (hopefull
 //global.grav = .3
 
 #endregion
-
+randomize()
 //savedir = program_directory+"/saves/"
 
 

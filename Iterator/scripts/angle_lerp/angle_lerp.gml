@@ -14,3 +14,15 @@ function angle_lerp(argument0, argument1, argument2) {
 
 
 }
+
+/**
+ * interpolate between angles
+ * @param {real} a start
+ * @param {real} b end
+ * @param {real} i increment
+ * @returns {real}
+ */
+function lerp_angle(a, b, i) {
+	var n = a + angle_difference(b, a);
+	return lerp(a, n, i);
+}
