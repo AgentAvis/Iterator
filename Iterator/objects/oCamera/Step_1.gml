@@ -3,14 +3,31 @@
 
 if can_zoom && !oConsole.console_status { //if  and room != rMenu and can_zoom {
 	//if keyboard_check(vk_shift) {
-	if true { //disable zoom
-		if keyboard_check_pressed(vk_up) {// mouse_wheel_down() {
+	//if !keyboard_check(vk_shift) { //disable zoom
+
+	//}
+	
+	if os_browser == browser_not_a_browser
+   {
+  //not in browser
+  		if mouse_wheel_up() {//  {
+			scroll_level += 1
+		}
+		if mouse_wheel_down() {//mouse_wheel_up() {
+			scroll_level -= 1
+		}
+   }
+else
+   {
+   //in browser
+   		if keyboard_check_pressed(vk_up) {//  {
 			scroll_level += 1
 		}
 		if keyboard_check_pressed(vk_down) {//mouse_wheel_up() {
 			scroll_level -= 1
 		}
-	}
+   }
+	
 	//}
 	if global.fullzoom {
 		scroll_level = clamp(scroll_level,-3,5)

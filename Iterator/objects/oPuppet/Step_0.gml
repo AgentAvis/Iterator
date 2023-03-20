@@ -7,10 +7,12 @@ event_inherited()
 dhsp = 0
 dvsp = 0
 
-dimage_angle = 0
+//dimage_angle = 0
 m = false
 
-manual_move = false
+manual_move = true
+global.focus = id;
+
 if manual_move {
 	var _up = false;
 	var _down = false;
@@ -18,41 +20,41 @@ if manual_move {
 	var _right = false;
 
 
-
-	if keyboard_check(vk_up) or keyboard_check(ord("W")) {
-		dvsp = -mspd
-		_up = true
-		m = true;
-	}
-	if keyboard_check(vk_down) or keyboard_check(ord("S")) {
-		dvsp = mspd	
-		_down = true;
-		m = true;
-	}
-	if keyboard_check(vk_right) or keyboard_check(ord("D")) {
-		dhsp = mspd	
-		_right = true
-		m = true;
-	}
-	if keyboard_check(vk_left) or keyboard_check(ord("A")) {
-		dhsp = -mspd	
-		_left = true
-		m = true;
-	}
-
+	//if keyboard_check(vk_shift) or true {
+		if keyboard_check(ord("W")) {
+			dvsp = -mspd
+			_up = true
+			m = true;
+		}
+		if keyboard_check(ord("S")) {
+			dvsp = mspd	
+			_down = true;
+			m = true;
+		}
+		if keyboard_check(ord("D")) {
+			dhsp = mspd	
+			_right = true
+			m = true;
+		}
+		if keyboard_check(ord("A")) {
+			dhsp = -mspd	
+			_left = true
+			m = true;
+		}
+	//}
 	if (_up and _right) or (_down and _right)  {
-		dimage_angle = 10	
+		//dimage_angle = 10	
 	}
 	if (_up and _left) or (_down and _left) {
-		dimage_angle = -10
+		//dimage_angle = -10
 	}
 
-	image_angle = lerp(image_angle,dimage_angle,.05)
+	//image_angle = lerp(image_angle,dimage_angle,.05)
 } else {
 	//desired_x = x
 	//desired_y = y
 	desired_mouse_dis = 48
-	error = 16*3
+	error = 16*6
 	
 	mouse_dis = point_distance(x,y,mouse_x,mouse_y);
 	//if (mouse_dis > (desired_mouse_dis + error )) {
@@ -62,8 +64,8 @@ if manual_move {
 		//find desired point
 		desired_dir = point_direction(x,y,mouse_x,mouse_y)
 		
-		desired_x = lerp(desired_x,x + lengthdir_x(mouse_dis-desired_mouse_dis,desired_dir),.1)
-		desired_y = lerp(desired_y,y + lengthdir_y(mouse_dis-desired_mouse_dis,desired_dir),.1)
+			desired_x = lerp(desired_x,x + lengthdir_x(mouse_dis-desired_mouse_dis,desired_dir),.1)
+			desired_y = lerp(desired_y,y + lengthdir_y(mouse_dis-desired_mouse_dis,desired_dir),.1)
 
 	//}	
 	
@@ -94,13 +96,13 @@ light.x = x
 light.y = y-16
 
 if get_speed() > mspd/2 or m {
-	image_angle = angle_lerp(image_angle,point_direction(x,y,mouse_x,mouse_y),.03)
-	//hsp = lerp(hsp,dhsp,.3)
-	//vsp = lerp(vsp,dvsp,.3)
+	image_angle = angle_lerp(image_angle,get_direction(),.1)
+	hsp = lerp(hsp,dhsp,.3)
+	vsp = lerp(vsp,dvsp,.3)
 } else {
 	//image_angle = angle_lerp(image_angle,0,.1,.001)
-	//hsp = lerp(hsp,dhsp,.05)
-	//vsp = lerp(vsp,dvsp,.05)		
+	hsp = lerp(hsp,dhsp,.05)
+	vsp = lerp(vsp,dvsp,.05)		
 }
 x += hsp;
 y += vsp;

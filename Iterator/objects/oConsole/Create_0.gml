@@ -47,6 +47,6 @@ add_command("tplayer","teleports the player to mouse position")
 add_command("make","o[Pawn to create],[number of pawns to spawn]");
 
 
-
+//instance_destroy()
 
 #endregion

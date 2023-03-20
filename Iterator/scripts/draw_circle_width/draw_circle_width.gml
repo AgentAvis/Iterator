@@ -45,6 +45,7 @@ function draw_circle_ext(_x, _y, r, bones = 15, ang = 0, angadd = 360, width = 1
             var dp = ang + a * i;
             var dm = dp - a;
             draw_vertex(_x + lengthdir_x(lp,dm), _y + lengthdir_y(lp,dm));
+			draw_line(x,y,mouse_x,mouse_y)
         }
         draw_vertex(_x + lengthdir_x(lp,AAa), _y + lengthdir_y(lp,AAa)); //Last point.
     }

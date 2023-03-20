@@ -1,6 +1,6 @@
-var _height = 32;
-var _width = 32;
-var _spacing = 8;
+//var _height = 32;
+//var _width = 32;
+//var _spacing = 8;
 
 //var _hi = 0;
 //repeat (_height) {
@@ -17,3 +17,10 @@ var _spacing = 8;
 //	}	
 //	_hi ++	
 //}
+
+image_blend = #db3ffd
+highlight_blend = #99e65f 	
+
+icon_symbol = 56
+
+program = "pearl_creator"

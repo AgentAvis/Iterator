@@ -12,4 +12,18 @@ outlinestyle = choose(1,2,3)
 vsp = 0
 hsp = 0
 
+icon_symbol = irandom(sprite_get_number(sGlyph_S))
+
 //motion_set_custom(random(5),random(360))
+program = "null"
+
+relocate_mode = false
+
+mspd = .5
+
+drag = .995
+
+image_blend = c_ltgray
+highlight_blend = c_white 	
+
+icon_symbol = 0

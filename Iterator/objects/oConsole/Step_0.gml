@@ -1,4 +1,4 @@
-
+exit;
 #region  Toggle code
 if keyboard_check_pressed(192)  { console_status = !console_status console_toggle(my_console) io_clear() }
 #endregion

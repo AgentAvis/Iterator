@@ -5,7 +5,7 @@ event_inherited()
 hsp = 0
 vsp = 0
 
-mspd = 3
+mspd = 1.5 //was 3
 
 depth -= 10
 

@@ -18,11 +18,17 @@ if surface_exists(light_surf) {
 				draw_self()	
 				//draw_line(x,y,mouse_x,mouse_y)
 			}
+			lightxoff = -5+(-7)
+			lightyoff = 4
+			with (oPearl) {
+				draw_sprite_ext(sGlyph_S,icon_symbol,x+other.lightxoff,y+other.lightyoff,image_xscale,image_yscale,0,c_white,image_alpha)	
+			}
 			
 			with (oPuppet) {
 				gpu_set_blendmode(bm_add)
 				draw_set_color(c_white)
 				draw_set_alpha(1)
+				draw_set_alpha(.25)
 				
 				halox = x
 				haloy = y-16
@@ -69,18 +75,20 @@ if surface_exists(light_surf) {
 					
 					_i ++		
 				}
+				draw_set_alpha(1)
 				
-				with (oCrosshair) {
-					draw_self()	
-				}
+
 								
 				//gpu_set_blendmode(bm_subtract)
 				//draw_set_color(c_white)
 				//draw_circle(x,y,24,false)
 				
 				gpu_set_blendmode(bm_add)
-
+				
 			}	
+			with (oCrosshair) {
+				draw_crosshair()	
+			}
 
 	surface_reset_target()
 	
