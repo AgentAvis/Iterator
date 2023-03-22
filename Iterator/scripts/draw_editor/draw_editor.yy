@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "Script107",
+  "name": "draw_editor",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

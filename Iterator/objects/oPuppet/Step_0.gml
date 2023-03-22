@@ -13,7 +13,11 @@ m = false
 manual_move = true
 global.focus = id;
 
-if manual_move {
+if !instance_exists(oEditor) {
+	can_move = true	
+}
+
+if manual_move and can_move {
 	var _up = false;
 	var _down = false;
 	var _left = false;
@@ -94,15 +98,18 @@ if manual_move {
 
 light.x = x
 light.y = y-16
-
-if get_speed() > mspd/2 or m {
-	image_angle = angle_lerp(image_angle,get_direction(),.1)
-	hsp = lerp(hsp,dhsp,.3)
-	vsp = lerp(vsp,dvsp,.3)
-} else {
-	//image_angle = angle_lerp(image_angle,0,.1,.001)
-	hsp = lerp(hsp,dhsp,.05)
-	vsp = lerp(vsp,dvsp,.05)		
+if can_move { //disabled when editor is open
+	if get_speed() > mspd/2 or m {
+	
+		image_angle = angle_lerp(image_angle,get_direction(),.1)
+	
+		hsp = lerp(hsp,dhsp,.3)
+		vsp = lerp(vsp,dvsp,.3)
+	} else {
+		//image_angle = angle_lerp(image_angle,0,.1,.001)
+		hsp = lerp(hsp,dhsp,.05)
+		vsp = lerp(vsp,dvsp,.05)		
+	}
 }
 x += hsp;
 y += vsp;

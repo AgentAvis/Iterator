@@ -12,3 +12,7 @@ with (instance_create(x,y,oLight_true)) {
 
 oCamera.tarx = x + (sprite_width/2)
 oCamera.tary = y + (sprite_height/2)
+
+can_x = oCan.x+(oCan.sprite_width/2)
+can_y = oCan.y+(oCan.sprite_width/2)
+

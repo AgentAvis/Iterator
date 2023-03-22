@@ -17,6 +17,7 @@ light.sprite_index = sGradient_true_128
 desired_x = 0; //init
 desired_y = 0; //init
 desired_dir = 0; //init
+can_move = true
 
 body = 
 {
