@@ -487,16 +487,24 @@ function verletGroupCreateRope(system, xx, yy, color, width, segmentLength, segm
 			var wHalf = width * 0.5;
 			
 			draw_set_color(color);
-			draw_primitive_begin(pr_trianglestrip);
-			for (var i = 0; i < stickAmount; i++) {
-				currentStick = stickList[| i];
-				stickDir = point_direction(currentStick.v1.x, currentStick.v1.y, currentStick.v2.x, currentStick.v2.y);
-				draw_vertex(currentStick.v1.x + lengthdir_x(wHalf, stickDir - 90), currentStick.v1.y + lengthdir_y(wHalf, stickDir - 90));
-				draw_vertex(currentStick.v1.x + lengthdir_x(wHalf, stickDir + 90), currentStick.v1.y + lengthdir_y(wHalf, stickDir + 90));
+			if width != 1 {
+				draw_primitive_begin(pr_trianglestrip);
+				for (var i = 0; i < stickAmount; i++) {
+					currentStick = stickList[| i];
+					stickDir = point_direction(currentStick.v1.x, currentStick.v1.y, currentStick.v2.x, currentStick.v2.y);
+					draw_vertex(currentStick.v1.x + lengthdir_x(wHalf, stickDir - 90), currentStick.v1.y + lengthdir_y(wHalf, stickDir - 90));
+					draw_vertex(currentStick.v1.x + lengthdir_x(wHalf, stickDir + 90), currentStick.v1.y + lengthdir_y(wHalf, stickDir + 90));
+				
+				}
+				draw_vertex(currentStick.v2.x + lengthdir_x(wHalf, stickDir - 90), currentStick.v2.y + lengthdir_y(wHalf, stickDir - 90));
+				draw_vertex(currentStick.v2.x + lengthdir_x(wHalf, stickDir + 90), currentStick.v2.y + lengthdir_y(wHalf, stickDir + 90));
+				draw_primitive_end();
+			} else {
+				for (var i = 0; i < stickAmount; i++) {
+					currentStick = stickList[| i];
+					draw_line(currentStick.v1.x, currentStick.v1.y, currentStick.v2.x, currentStick.v2.y);
+				}
 			}
-			draw_vertex(currentStick.v2.x + lengthdir_x(wHalf, stickDir - 90), currentStick.v2.y + lengthdir_y(wHalf, stickDir - 90));
-			draw_vertex(currentStick.v2.x + lengthdir_x(wHalf, stickDir + 90), currentStick.v2.y + lengthdir_y(wHalf, stickDir + 90));
-			draw_primitive_end();
 			draw_set_color(c_white);
 		};
 	}
