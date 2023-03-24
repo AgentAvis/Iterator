@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oEditor",
+  "name": "oCamera_focus",
   "spriteId": {
-    "name": "sEditor",
-    "path": "sprites/sEditor/sEditor.yy",
+    "name": "Sprite51",
+    "path": "sprites/Sprite51/Sprite51.yy",
   },
   "solid": false,
   "visible": true,
@@ -24,15 +24,11 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Game",
-    "path": "folders/Root/Game.yy",
+    "name": "Iterator",
+    "path": "Iterator.yyp",
   },
 }

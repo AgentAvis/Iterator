@@ -11,6 +11,8 @@ depth -= 10
 
 //global.focus = id
 
+instance_create(x,y,oCamera_focus)
+
 light = instance_create(x,y,oLight_true)
 light.sprite_index = sGradient_true_128
 
@@ -38,7 +40,8 @@ head =
     y : y,
     angle : image_angle,
     blend : c_white,
-    alpha : image_alpha
+    alpha : image_alpha,
+	wire  : instance_create(x,y,oWire_point)
 };
 
 arm1 = 

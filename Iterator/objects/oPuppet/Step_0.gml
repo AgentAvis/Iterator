@@ -11,10 +11,16 @@ dvsp = 0
 m = false
 
 manual_move = true
-global.focus = id;
+global.focus = oCamera_focus;
+
+
 
 if !instance_exists(oEditor) {
 	can_move = true	
+	oCamera_focus.x = x
+	oCamera_focus.y = y
+} else {
+	
 }
 
 if manual_move and can_move {

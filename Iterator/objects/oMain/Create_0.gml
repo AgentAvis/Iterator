@@ -16,19 +16,19 @@ rope1.vertexAttachTo(20, oUmbillical_mid_point);
 
 rope2 = verletGroupCreateRope(verletSystem1, oPuppet.x, oPuppet.y, _red,1,7/2, 15*2, 2, 10);
 rope2.vertexAttachTo(first, oUmbillical_wrist_point);
-rope2.vertexAttachTo(last, oPuppet);
+rope2.vertexAttachTo(last,  oPuppet.head.wire);
 
 rope3 = verletGroupCreateRope(verletSystem1, oPuppet.x, oPuppet.y, _red,1,7/2, 12*2, 2, 10);
 rope3.vertexAttachTo(first, oUmbillical_wrist_point);
-rope3.vertexAttachTo(last, oPuppet);
+rope3.vertexAttachTo(last, oPuppet.head.wire);
 
 rope3 = verletGroupCreateRope(verletSystem1, oPuppet.x, oPuppet.y, _red,1,7/2, 8*2, 2, 10);
 rope3.vertexAttachTo(first, oUmbillical_wrist_point);
-rope3.vertexAttachTo(last, oPuppet);
+rope3.vertexAttachTo(last, oPuppet.head.wire);
 
 rope3 = verletGroupCreateRope(verletSystem1, oPuppet.x, oPuppet.y, _blue,1,7/2, 15*2, 2, 10);
 rope3.vertexAttachTo(first, oUmbillical_wrist_point);
-rope3.vertexAttachTo(last, oPuppet);
+rope3.vertexAttachTo(last, oPuppet.head.wire);
 
 //**//		// Create verlet groups
 //**//		#region Verlet ropes
