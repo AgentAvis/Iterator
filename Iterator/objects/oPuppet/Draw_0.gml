@@ -47,14 +47,14 @@ if (body.angle mod 360) > 180 { arm_angle_offset_amt_val*= -1 }
 
 //draw_text(x,y,string(body.angle mod 360))
 
-arm1_height_offset_dis = head_offset_dis - 2
+arm1_height_offset_dis = head_offset_dis - 1
 arm1_width_offset_dis = 4
 arm1.x = x + lengthdir_x(arm1_height_offset_dis,body.angle) + lengthdir_x(arm1_width_offset_dis,body.angle+90)
 arm1.y = y + lengthdir_y(arm1_height_offset_dis,body.angle) + lengthdir_y(arm1_width_offset_dis,body.angle+90)
 arm1.angle = angle_lerp(arm1.angle,(270-arm_angle_offset_amt_val),.1)//-body.angle//+90
 
 arm2_height_offset_dis = head_offset_dis - 1
-arm2_width_offset_dis = 5
+arm2_width_offset_dis = 6
 arm2.x = x + lengthdir_x(arm2_height_offset_dis,body.angle) + lengthdir_x(arm2_width_offset_dis,body.angle-90)
 arm2.y = y + lengthdir_y(arm2_height_offset_dis,body.angle) + lengthdir_y(arm2_width_offset_dis,body.angle-90)
 arm2.angle = angle_lerp(arm2.angle,(270+arm_angle_offset_amt_val),.1)//-body.angle//-90

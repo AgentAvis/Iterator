@@ -7,12 +7,9 @@ if instance_exists(oEditor) {
 
 		
 		
-		//draw_sprite_ext(sColor_picker,2,oEditor.color_picker_x,oEditor.color_picker_y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+		draw_sprite_ext(sColor_picker,2,oEditor.color_picker_x,oEditor.color_picker_y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
 
-		//if oEditor.collect_color {
-			oEditor.selected_col = draw_getpixel(mouse_x,mouse_y)	
-			oEditor.collect_color = false
-		//}
+
 
 		gpu_set_blendmode_ext( bm_inv_dest_colour, bm_inv_src_alpha );
 		draw_sprite_ext(sColor_cursor,1,oEditor.color_x,oEditor.color_y,1,1,0,c_white,1)

@@ -29,3 +29,12 @@ color_x = 0;
 color_y = 0;
 
 selected_col = c_white;
+
+color_picker_xoff = 0
+
+
+
+
+
+
+

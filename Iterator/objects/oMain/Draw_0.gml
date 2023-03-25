@@ -1,5 +1,5 @@
 /// @description Draw the simulation
-if (verletSystemExists(verletSystem1)) {
+if (verletSystemExists(verletSystem1)) and oArm.image_alpha != 0 {
 	verletSystem1.draw();
 	
 	// Draw wireframes
