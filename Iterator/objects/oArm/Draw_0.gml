@@ -1,4 +1,11 @@
 /// @desc render
+
+if instance_exists(oEditor) {
+	image_alpha = 0
+} else {
+	image_alpha = 1	
+}
+
 var points = ik_chain_get_points(chain,true);
 var point_last = array_length_1d(points)-2;
 
@@ -21,24 +28,24 @@ for(var i = 0; i<point_last; i+=2){
 		draw_sprite_ext(sShoulder,0,x2,y2,1,1,point_direction(x1,y1,x2,y2)+180,image_blend,image_alpha)	
 		_startx = x2;
 		_starty = y2;
-		draw_sprite(Bearing_large,0,x2,y2)
+		draw_sprite_ext(Bearing_large,0,x2,y2,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
 	}
 	if i = 8 {
 		
 		draw_sprite_ext(sArm1,0,x2,y2,1,1,point_direction(x1,y1,x2,y2)+180,image_blend,image_alpha)	
-		draw_sprite(Bearing_mid,0,x2,y2)
+		draw_sprite_ext(Bearing_mid,0,x2,y2,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
 		mid_point.x = x1
 		mid_point.y = y1
 	}
 	if i = 6 {
 		
 		draw_sprite_ext(sArm2,0,x2,y2,1,1,point_direction(x1,y1,x2,y2)+180,image_blend,image_alpha)	
-		draw_sprite(bearing_small,0,x2,y2)
+		draw_sprite_ext(bearing_small,0,x2,y2,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
 	}
 	if i < 6 {
 		
 		draw_sprite_ext(sArm3,0,x2,y2,1,1,point_direction(x1,y1,x2,y2)+180,image_blend,image_alpha)	
-		draw_sprite(bearing_tiny,0,x2,y2)
+		draw_sprite_ext(bearing_tiny,0,x2,y2,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
 	}
 	
 	if i = 0 {

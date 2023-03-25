@@ -62,14 +62,14 @@ arm2.angle = angle_lerp(arm2.angle,(270+arm_angle_offset_amt_val),.1)//-body.ang
 //draw_text(x,y,string(270+arm_angle_offset_amt_val))
 
 draw_sprite_ext(body.sprite,body.index,body.x,body.y,image_xscale,image_yscale,body.angle,body.blend,body.alpha*image_alpha)
-draw_sprite_ext(sMoon_robe,body.index,body.x,body.y,image_xscale,image_yscale,body.angle,body.blend,body.alpha*image_alpha)
+draw_sprite_ext(sMoon_robe,body.index,body.x,body.y,image_xscale,image_yscale,body.angle,body.blend,body.alpha*image_alpha*robe_trans_alpha)
 
 draw_sprite_ext(head.sprite,head.index,head.x,head.y,image_xscale,image_yscale,head.angle,head.blend,head.alpha*image_alpha)
 
 draw_sprite_ext(arm1.sprite,arm1.index,arm1.x,arm1.y,image_xscale,image_yscale,arm1.angle,arm1.blend,arm1.alpha*image_alpha)
-draw_sprite_ext(sMoon_sleeve,arm1.index,arm1.x,arm1.y,image_xscale,-image_yscale,arm1.angle,arm1.blend,arm1.alpha*image_alpha)
+draw_sprite_ext(sMoon_sleeve,arm1.index,arm1.x,arm1.y,image_xscale,-image_yscale,arm1.angle,arm1.blend,arm1.alpha*image_alpha*robe_trans_alpha)
 
 draw_sprite_ext(arm2.sprite,arm2.index,arm2.x,arm2.y,image_xscale,image_yscale,arm2.angle,arm2.blend,arm2.alpha*image_alpha)
-draw_sprite_ext(sMoon_sleeve,arm2.index,arm2.x,arm2.y,image_xscale,image_yscale,arm2.angle,arm2.blend,arm2.alpha*image_alpha)
+draw_sprite_ext(sMoon_sleeve,arm2.index,arm2.x,arm2.y,image_xscale,image_yscale,arm2.angle,arm2.blend,arm2.alpha*image_alpha*robe_trans_alpha)
 
 //draw_circle(desired_x,desired_y,2,false)

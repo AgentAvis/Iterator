@@ -20,6 +20,7 @@ desired_x = 0; //init
 desired_y = 0; //init
 desired_dir = 0; //init
 can_move = true
+robe_trans_alpha = 1
 
 body = 
 {
