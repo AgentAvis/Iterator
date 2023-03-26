@@ -5,11 +5,16 @@ if (!surface_exists(surface)) {
 	surface = surface_create(128, 128); //whatever size of picker sprite
 	surface_set_target(surface);
 	draw_clear_alpha(c_black, 0);
-	draw_sprite(sColor_picker,2,sprite_get_width(sColor_picker)/2,sprite_get_height(sColor_picker)/2);
+	draw_sprite_ext(sColor_picker,2,sprite_get_width(sColor_picker)/2,sprite_get_height(sColor_picker)/2,image_xscale,image_yscale,image_angle,merge_color(c_black,c_white,oEditor.color_picker_value),image_alpha);
+	surface_reset_target();
+} else {
+	surface_set_target(surface);
+	draw_clear_alpha(c_black, 0);
+	draw_sprite_ext(sColor_picker,2,sprite_get_width(sColor_picker)/2,sprite_get_height(sColor_picker)/2,image_xscale,image_yscale,image_angle,merge_color(c_black,c_white,oEditor.color_picker_value),image_alpha);
 	surface_reset_target();
 }
 
-	draw_surface(surface,0,0);
+	//draw_surface(surface,0,0);
 
 if oEditor.collect_color {
 	var Gui_X = mouse_x-(oEditor.x+(oEditor.color_picker_xoff))+64-21;
@@ -22,10 +27,7 @@ if oEditor.collect_color {
 	oEditor.collect_color = false
 	
 	if oEditor.color_picker_target = oPuppet { 
-		oPuppet.head.blend = oEditor.selected_col;	
-		oPuppet.body.blend = oEditor.selected_col;
-		oPuppet.arm1.blend = oEditor.selected_col;
-		oPuppet.arm2.blend = oEditor.selected_col;
+		set_body_color(oEditor.selected_col)
 		
 		
 	}

@@ -7,7 +7,7 @@ if instance_exists(oEditor) {
 
 		
 		
-		draw_sprite_ext(sColor_picker,2,oEditor.color_picker_x,oEditor.color_picker_y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+		draw_sprite_ext(sColor_picker,2,oEditor.color_picker_x,oEditor.color_picker_y,image_xscale,image_yscale,image_angle,merge_color(c_black,c_white,oEditor.color_picker_value),image_alpha)
 
 
 
