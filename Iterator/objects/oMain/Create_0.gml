@@ -4,30 +4,40 @@ depth = 151
 
 // Create a new verlet system
 // You can create multiple systems with different physic properties
-verletSystem1 = new verletSystem(0.999, 0);
+verletSystem1 = new verletSystem(0.99, 0);
 
 var _red = merge_color(c_red,c_white,.25);
 var _blue = merge_color(c_blue,c_white,.25);
 
+instance_create(x,y,oUmb_splitpoint)
+
+//main cord
 rope1 = verletGroupCreateRopeTextured(verletSystem1, 190, 100, sCord, 40, 1, 10);
-rope1.vertexAttachTo(first, oUmbillical_wrist_point);
-rope1.vertexAttachTo(last, oUmbillical_mount_point);
+//rope1.vertexAttachObject(last, oUmb_splitpoint, vertexAttachmentType.both);
+rope1.vertexAttachTo(last, oUmb_splitpoint);
+//rope1.vertexAttachTo(first, oUmbillical_wrist_point);
+rope1.vertexAttachTo(first, oUmbillical_mount_point);
 rope1.vertexAttachTo(20, oUmbillical_mid_point);
 
+//wire1
 rope2 = verletGroupCreateRope(verletSystem1, oPuppet.x, oPuppet.y, _red,1,7/2, 15*2, 2, 10);
-rope2.vertexAttachTo(first, oUmbillical_wrist_point);
+//rope2.vertexAttachObject(first, oUmb_splitpoint, vertexAttachmentType.both);
+rope2.vertexAttachTo(first, oUmb_splitpoint);
 rope2.vertexAttachTo(last,  oPuppet.head.wire);
 
+//wire2
 rope3 = verletGroupCreateRope(verletSystem1, oPuppet.x, oPuppet.y, _red,1,7/2, 12*2, 2, 10);
-rope3.vertexAttachTo(first, oUmbillical_wrist_point);
+rope3.vertexAttachTo(first, oUmb_splitpoint);
 rope3.vertexAttachTo(last, oPuppet.head.wire);
 
+//wire3
 rope3 = verletGroupCreateRope(verletSystem1, oPuppet.x, oPuppet.y, _red,1,7/2, 8*2, 2, 10);
-rope3.vertexAttachTo(first, oUmbillical_wrist_point);
+rope3.vertexAttachTo(first, oUmb_splitpoint);
 rope3.vertexAttachTo(last, oPuppet.head.wire);
 
+//wire4
 rope3 = verletGroupCreateRope(verletSystem1, oPuppet.x, oPuppet.y, _blue,1,7/2, 15*2, 2, 10);
-rope3.vertexAttachTo(first, oUmbillical_wrist_point);
+rope3.vertexAttachTo(first, oUmb_splitpoint);
 rope3.vertexAttachTo(last, oPuppet.head.wire);
 
 //**//		// Create verlet groups

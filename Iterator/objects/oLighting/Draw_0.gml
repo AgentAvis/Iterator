@@ -1,16 +1,18 @@
 // Event created by Avis.
 event_inherited()
 
+
+
 if surface_exists(light_surf) {
 	surface_set_target(light_surf)
-		draw_clear_alpha(c_black,1);
+		draw_clear_alpha(merge_color(c_black,c_white,.05),1);
 			//gpu_set_blendmode_ext(bm_zero,bm_one) //lights?
 			
 			
-			draw_set_alpha(.2) 
-			draw_set_color(c_white)
-			draw_rectangle(0,0,512,512,false)
-			draw_set_alpha(1)
+			//draw_set_alpha(.2) 
+			//draw_set_color(c_white)
+			//draw_rectangle(0,0,1024,1024,false)
+			//draw_set_alpha(1)
 			
 			gpu_set_blendmode(bm_add)
 			with (oLight) {
@@ -95,6 +97,8 @@ if surface_exists(light_surf) {
 			with (oCrosshair) {
 				draw_crosshair()	
 			}
+			
+			//draw_sprite_ext(sBig_light,0,0,0,1,1,0,oPuppet.light.image_blend,.05)
 
 	surface_reset_target()
 	
@@ -102,11 +106,12 @@ if surface_exists(light_surf) {
 		
 	}
 	
-	gpu_set_blendmode_ext(bm_zero, bm_src_color);
+	//gpu_set_blendmode_ext(bm_zero, bm_src_color);
+	gpu_set_blendmode_ext(bm_dest_color,bm_zero);
 	draw_surface(light_surf,0,0)
 	gpu_set_blendmode(bm_normal)	
 
 } else {
-	light_surf = surface_create(512,512)	
+	light_surf = surface_create(1024,1024)
 }
 

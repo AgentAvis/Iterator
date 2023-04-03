@@ -95,7 +95,6 @@ if (default_zoom_width != window_get_width()) or (default_zoom_height != window_
 	default_zoom_height = window_get_height()
 }
 if window_has_focus() {
-	//if (surface_get_width(application_surface)!= window_get_width()) or (surface_get_height(application_surface) != window_get_height()) {
 	surface_resize( application_surface, window_get_width(), window_get_height());
 	if zoom_level < 1 {
 		surface_resize( application_surface, window_get_width()*(zoom_level), window_get_height()*(zoom_level));

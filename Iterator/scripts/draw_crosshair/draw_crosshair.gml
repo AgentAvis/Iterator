@@ -27,13 +27,37 @@ function draw_crosshair(){
 			}
 		}
 	} else {
-		if !selected_pearl.relocate_mode {
-			//PEARL IS SELECTED, SHOW THAT VIA A HALO
-			//draw_set_circle_precision(16)
-			draw_set_alpha(cursor_alpha)
-			draw_circle_ext(selected_pearl.x,selected_pearl.y,pearl_halo_base_size+abs((selection_circle_size*(.5+sin(oDj.timestep/(oPuppet.breathing_rate/1.5))/2))),6,oDj.timestep,360,selection_circle_size/2,true)
-			draw_set_alpha(1)	
 		
+		
+		
+		//PEARL IS SELECTED, SHOW THAT VIA A HALO
+		//draw_set_circle_precision(16)
+		draw_set_alpha(cursor_alpha)
+		
+		var _cir_x = selected_pearl.x;
+		var _cir_y = selected_pearl.y
+		var _cir_r = pearl_halo_base_size+abs((selection_circle_size*(.5+sin(oDj.timestep/(oPuppet.breathing_rate/1.5))/2)));
+		var _cir_b = 6;
+		var _cir_a = oDj.timestep;
+		var _cir_angadd = 360;
+		var _cir_w = selection_circle_size/2;
+		
+		var _i = 0;
+		repeat(_cir_b) {
+			var _dir = (_i/_cir_b)*360
+			var _lenx = lengthdir_x(1,_dir);
+			var _leny = lengthdir_y(1,_dir);
+			
+			draw_line(_cir_x + (_lenx*_cir_r),_cir_y + (_leny*_cir_y),_cir_x + (_lenx*_cir_r*2),_cir_y + (_leny*_cir_y*2))
+			
+			_i ++
+		}
+		draw_circle_ext(_cir_x,_cir_y,_cir_r,_cir_b,_cir_a,_cir_angadd,_cir_w,true)
+		
+		draw_set_alpha(1)	
+		
+		if !selected_pearl.relocate_mode {
+			//pearl is not being relocated, show the options
 			show_options(selected_pearl)
 		}
 	}

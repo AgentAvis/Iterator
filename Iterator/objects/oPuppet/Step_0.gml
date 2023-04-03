@@ -164,10 +164,11 @@ spacing = 24
 lightcolor = merge_color(c_aqua,c_orange,.25+(.5+(sin(oDj.timestep/60)/2))/2)//make_color_hsv(oDj.timestep mod 255,255,200)
 light.image_blend = lightcolor
 light.image_alpha = .5
-oCart.image_blend = merge_color(lightcolor,c_white,.5)
-oArm.image_blend = lightcolor
-oCan.image_blend = lightcolor
-oCan_bottom.image_blend = lightcolor
+oCan.can_light.image_blend = lightcolor
+//oCart.image_blend = merge_color(lightcolor,c_white,.5)
+//oArm.image_blend = lightcolor
+//oCan.image_blend = lightcolor
+//oCan_bottom.image_blend = lightcolor
 //oLighting.image_blend = lightcolor
 
 #endregion

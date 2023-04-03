@@ -20,3 +20,11 @@ function set_body_color(_color) {
 	oPuppet.arm1.blend = _color;
 	oPuppet.arm2.blend = _color;	
 }
+
+// Function to calculate distance squared between two points
+function distance_squared(x1, y1, x2, y2)
+{
+    var dx = x2 - x1;
+    var dy = y2 - y1;
+    return dx * dx + dy * dy;
+}

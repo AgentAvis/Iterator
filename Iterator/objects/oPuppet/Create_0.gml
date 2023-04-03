@@ -66,5 +66,5 @@ arm2 =
     blend : image_blend,
     alpha : image_alpha
 };
-arm_angle_offset_amt = 45/2
+arm_angle_offset_amt = 90//45/2
 breathing_rate = 30

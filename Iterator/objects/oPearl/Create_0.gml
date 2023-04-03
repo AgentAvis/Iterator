@@ -27,3 +27,10 @@ image_blend = c_ltgray
 highlight_blend = c_white 	
 
 icon_symbol = 0
+
+mass = random_range(.9,1.1)
+
+col_cooldown = 0
+max_col_cooldown = 30
+
+lastcol_obj = noone;

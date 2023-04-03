@@ -1,7 +1,9 @@
 // Event created by Avis.
 event_inherited()
 
-light_surf = surface_create(512,512)
+light_surface_size = 1024
+
+light_surf = surface_create(light_surface_size,light_surface_size)
 
 depth = 150
 

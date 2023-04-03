@@ -17,18 +17,18 @@ if relocate_mode = true {
 		pearl_exit()	
 		relocate_mode = false
 		if point_distance(x,y,oCrosshair.x,oCrosshair.y) < 16 {
-			hsp = 0
-			vsp = 0
+			//hsp = 0
+			//vsp = 0
 		}
 	}
 }
-
+col_cooldown --	
 
 x += hsp
 y += vsp
 
-hsp *= functional_drag
-vsp *= functional_drag
+//hsp *= functional_drag
+//vsp *= functional_drag
 //
 
 //if mouse_check_button(mb_left) {

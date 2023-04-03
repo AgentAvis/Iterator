@@ -3,6 +3,11 @@
 function show_options(_pearl){
 	var option;
 	
+	//mouse_x += _pearl.hsp
+	//mouse_y += _pearl.vsp
+	
+	//display_mouse_set(display_mouse_get_x()+_pearl.hsp,display_mouse_get_y())
+	
 	if _pearl.program = "null" {
 		option[0] = 
 			{

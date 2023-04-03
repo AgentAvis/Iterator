@@ -4,8 +4,6 @@ function get_direction() {
 	} else {
 		return point_direction(0,0,hsp,vsp)	
 	}
-
-
-
-
 }
+
+
