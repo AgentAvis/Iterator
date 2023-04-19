@@ -1,9 +1,6 @@
 {
-  "extensionId": {
-    "name": "Draw_Circle_Width",
-    "path": "extensions/Draw_Circle_Width/Draw_Circle_Width.yy"
-  },
-  "resourceVersion": "1.0",
   "resourceType": "GMExtensionConfigSet",
-  "configurables": null
+  "configurables": null,
+  "extensionId": null,
+  "resourceVersion": "1.0"
 }

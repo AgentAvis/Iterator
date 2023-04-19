@@ -5,7 +5,7 @@ event_inherited()
 
 if surface_exists(light_surf) {
 	surface_set_target(light_surf)
-		draw_clear_alpha(merge_color(c_black,c_white,.05),1);
+		draw_clear_alpha(merge_color(c_black,c_white,.125),1);
 			//gpu_set_blendmode_ext(bm_zero,bm_one) //lights?
 			
 			
@@ -99,6 +99,16 @@ if surface_exists(light_surf) {
 			}
 			
 			//draw_sprite_ext(sBig_light,0,0,0,1,1,0,oPuppet.light.image_blend,.05)
+			
+			gpu_set_blendmode(bm_normal)
+			gpu_set_fog(true,c_black,0,0)
+			with (all) {
+				if visible and sprite_exists(sprite_index) and sprite_width < 64 {
+					draw_sprite_ext(sprite_index,image_index,x+8,y-8,image_xscale,image_yscale,image_angle,image_blend,image_alpha/4)
+				}
+			}
+
+			gpu_set_fog(false,c_white,0,0)
 
 	surface_reset_target()
 	
