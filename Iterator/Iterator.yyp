@@ -55,7 +55,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.2.1.75",
+    "IDEVersion": "2023.4.0.84",
   },
   "resources": [
     {"id":{"name":"rGame","path":"rooms/rGame/rGame.yy",},},
@@ -100,6 +100,7 @@
     {"id":{"name":"ease_out_back","path":"scripts/ease_out_back/ease_out_back.yy",},},
     {"id":{"name":"do_collisions","path":"scripts/do_collisions/do_collisions.yy",},},
     {"id":{"name":"lerp_clamped","path":"scripts/lerp_clamped/lerp_clamped.yy",},},
+    {"id":{"name":"instance_nth_nearest","path":"scripts/instance_nth_nearest/instance_nth_nearest.yy",},},
     {"id":{"name":"oEditor","path":"objects/oEditor/oEditor.yy",},},
     {"id":{"name":"sButton_mask","path":"sprites/sButton_mask/sButton_mask.yy",},},
     {"id":{"name":"ease_out_elastic","path":"scripts/ease_out_elastic/ease_out_elastic.yy",},},

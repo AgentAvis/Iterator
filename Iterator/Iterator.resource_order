@@ -38,6 +38,7 @@
     {"name":"ease_out_back","order":21,"path":"scripts/ease_out_back/ease_out_back.yy",},
     {"name":"do_collisions","order":1,"path":"scripts/do_collisions/do_collisions.yy",},
     {"name":"lerp_clamped","order":3,"path":"scripts/lerp_clamped/lerp_clamped.yy",},
+    {"name":"instance_nth_nearest","order":1,"path":"scripts/instance_nth_nearest/instance_nth_nearest.yy",},
     {"name":"oEditor","order":6,"path":"objects/oEditor/oEditor.yy",},
     {"name":"sButton_mask","order":9,"path":"sprites/sButton_mask/sButton_mask.yy",},
     {"name":"ease_out_elastic","order":25,"path":"scripts/ease_out_elastic/ease_out_elastic.yy",},

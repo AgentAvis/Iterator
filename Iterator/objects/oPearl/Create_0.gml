@@ -19,9 +19,20 @@ program = "null"
 
 relocate_mode = false
 
+set_orbit = false
+
+orbit_mode = false
+
+var orbit_target
+
+orbit_dis = 15
+orbit_angle = 0
+orbit_speed = 1
+
+
 mspd = .5
 
-drag = .995
+drag = 0.995
 
 image_blend = c_ltgray
 highlight_blend = c_white 	

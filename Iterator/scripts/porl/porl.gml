@@ -16,6 +16,11 @@ function show_options(_pearl){
 			};
 		option[1] = 
 			{
+			    mytext : "Orbit",
+			    set_script : pearl_set_orbit
+			};
+		option[2] = 
+			{
 			    mytext : "Exit",
 			    set_script : pearl_exit
 			};
@@ -56,7 +61,7 @@ function show_options(_pearl){
 			var _jump_out_amt = 5;
 			_hover_xoffset = _jump_out_amt//(_jump_out_amt/2)+(((.5+(cos((oDj.timestep)/(oPuppet.breathing_rate))/2)))*_jump_out_amt)
 			if mouse_check_button_pressed(mb_left) {
-				script_execute(option[_i].set_script)	
+				script_execute(option[_i].set_script)
 			}
 		}
 		
